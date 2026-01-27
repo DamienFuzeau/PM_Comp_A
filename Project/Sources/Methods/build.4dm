@@ -20,7 +20,8 @@ If (OK=1)
 			
 			var $worker : 4D.SystemWorker
 			var $param:={currentDirectory: Folder("/PACKAGE/")}
-			var $ghCreateRelease:="/usr/local/bin/gh release create "+$version
+			//var $ghCreateRelease:="/usr/local/bin/gh release create "+$version // Mac Intel
+			var $ghCreateRelease:="/opt/homebrew/bin/gh release create "+$version  // Mac Silicon
 			$ghCreateRelease+=" \""+File($zipFile.platformPath; fk platform path).path+"#"+$zipFile.fullName+"\""
 			$ghCreateRelease+=" --title \"Version "+$version+"\""
 			$ghCreateRelease+=" --notes \"Version "+$version+"\""
