@@ -3,6 +3,7 @@ var $version:=File("/RESOURCES/version.txt").getText()
 $version:=Request("Version:"; $version)
 If (OK=1)
 	File("/RESOURCES/version.txt").setText($version)
+	METHOD SET CODE("[class]/Version"; "Function version_"+Replace string($version; "."; "_")+"()")
 	
 	BUILD APPLICATION(File(Build application settings file).platformPath)
 	
