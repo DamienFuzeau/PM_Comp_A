@@ -14,8 +14,8 @@
 		}
 	},
 	"Version": {
-		"version_5_1_1()": {
-			"Syntax": "**.version_5_1_1**()",
+		"version_5_2_0()": {
+			"Syntax": "**.version_5_2_0**()",
 			"Params": [],
 			"Summary": ""
 		}
